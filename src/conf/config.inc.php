@@ -22,3 +22,4 @@ $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // create factories
 $OBSERVATORY_FACTORY = new ObservatoryFactory($DB);
 $OBSERVATION_FACTORY = new ObservationFactory($DB);
+$USER_FACTORY = new UserFactory(null);
