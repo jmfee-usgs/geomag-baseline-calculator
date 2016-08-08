@@ -73,6 +73,9 @@ if (!Function.prototype.bind) {
   require('./spec/VerticalIntensitySummaryViewTest');
   require('./spec/ObservationSummaryViewTest');
 
+  require('./spec/datatests/BSL2016106Test');
+
+
   if (window.mochaPhantomJS) {
       // window.initMochaPhantomJS();
       window.mochaPhantomJS.run();
