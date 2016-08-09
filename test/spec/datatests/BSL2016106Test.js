@@ -381,9 +381,7 @@ describe('BSL 2016-106 (aka 2016-04-15)', function () {
     before(function () {
       measurements = set1.get('measurements').data();
       declinations = factory.getDeclinations(measurements);
-      console.log(declinations);
       times = factory.getMeasurementValues(declinations, 'time');
-      console.log(times);
     });
 
     it('set number is 1', function () {
@@ -410,21 +408,21 @@ describe('BSL 2016-106 (aka 2016-04-15)', function () {
       var absolute;
 
       absolute = calculator.magneticDeclination(set1);
-      expect(absolute * 60).to.equal(-50.75);
+      expect((absolute * 60).toFixed(2)).to.equal('-50.75');
     });
 
     it('ordinate value is -8.96', function () {
       var ordinate;
 
       ordinate = calculator.dComputed(set1);
-      expect(ordinate * 60).to.equal(-8.96);
+      expect((ordinate * 60).toFixed(2)).to.equal('-8.96');
     });
 
     it('baseline value is -41.79', function () {
       var baseline;
 
       baseline = calculator.dBaseline(set1);
-      expect(baseline * 60).to.equal(-41.79)
+      expect((baseline * 60).toFixed(2)).to.equal('-41.79');
     });
   });
 
